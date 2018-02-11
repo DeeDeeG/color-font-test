@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Emoji Font Test</title>
+        <meta charset="utf-8">
+        <style>
+
+            /* Font rules for Main Tests */
+
+            #microsoft > .system {
+                font-family: "Segoe UI Emoji", "Noto Emoji";
+            }
+            
+            #microsoft > .font-face {
+                font-family: "MSFT-font_face", "Noto Emoji";
+            }
+            
+            #apple > .system {
+                font-family: "Apple Color Emoji", "Noto Emoji";
+            }
+            
+            #apple > .font-face {
+                font-family: "APPL-font_face", "Noto Emoji";
+            }
+            
+            #google > .system {
+                font-family: "Noto Color Emoji", "Noto Emoji";
+            }
+            
+            #google > .font-face {
+                font-family: "GOOG-font_face", "Noto Emoji";
+            }
+            
+            #twitter > .system {
+                font-family: "Twitter Color Emoji", "Noto Emoji";
+            }
+            
+            #twitter > .font-face {
+                font-family: "TWTR-font_face", "Noto Emoji";
+            }
+
+            /* Font Rules for Extra Tests */
+
+            #emojione-moz > .system {
+                font-family: "EmojiOne Mozilla", "Noto Emoji";
+            }
+
+            #emojione-moz > .font-face {
+                font-family: "E1MZ-font_face", "Noto Emoji";
+            }
+
+            #gilbert > .system {
+                font-family: "Gilbert Color", "Noto Emoji";
+            }
+
+            #gilbert > .font-face {
+                font-family: "TYWP-font_face", "Noto Emoji";
+            }
+
+            #emojione-sbix > .system {
+                font-family: ".Apple Color Emoji UI", "Noto Emoji";
+
+            }
+
+            #emojione-sbix > .font-face {
+                font-family: "E1BX-font_face", "Noto Emoji";
+            }
+
+            #emojione-cbdt > .system {
+                font-family: "Noto Color Emoji", "Noto Emoji";
+            }
+
+            #emojione-cbdt > .font-face {
+                font-family: "E1CB-font_face", "Noto Emoji";
+            }
+
+            #funkster > .system {
+                font-family: "Funkster", "Noto Emoji";
+            }
+
+            #funkster > .font-face {
+                font-family: "FUNK-font_face", "Noto Emoji";
+            }
+
+            #noto-traditional > .system {
+                font-family: "Noto Emoji", "Noto Emoji";
+            }
+
+            #noto-traditional > .font-face {
+                font-family: "NOTR-font_face", "Noto Emoji";
+            }
+
+            /* @font-face Declarations for Main Tests */
+            
+            @font-face {
+                font-family: "MSFT-font_face";
+                src: url(seguiemj.ttf) format("truetype");
+            }
+            
+            @font-face {
+                font-family: "APPL-font_face";
+                src: url("Apple Color Emoji.ttf") format("truetype");
+            }
+            
+            @font-face {
+                font-family: "GOOG-font_face";
+                src: url(NotoColorEmoji.ttf) format("truetype");
+            }
+            
+            @font-face {
+                font-family: "TWTR-font_face";
+                src: url(TwitterColorEmoji-SVGinOT.ttf) format("truetype");
+            }
+
+            /* @font-face Declarations for Extra Tests */
+
+            @font-face {
+                font-family: "E1MZ-font_face";
+                src: url(EmojiOneMozilla.ttf) format("truetype");
+            }
+
+            @font-face {
+                font-family: "TYWP-font_face";
+                src: url("Gilbert-Color Bold-Preview_1004.otf") format("truetype");
+            }
+
+            @font-face {
+                font-family: "E1BX-font_face";
+                src: url(emojione-apple.ttc) format("truetype");
+            }
+
+            @font-face {
+                font-family: "E1CB-font_face";
+                src: url(emojione-android.ttf) format("truetype");
+            }            
+
+            @font-face {
+                font-family: "FUNK-font_face";
+                src: url(Funkster.ttf) format("truetype");
+            }
+
+            @font-face {
+                font-family: "NOTR-font_face";
+                src: url(NotoEmoji-Regular.ttf) format("truetype");
+            }
+        </style>
+        <style>
+
+        /* General Styling (Makes Test Page Look Nice!)*/
+
+            body {
+                font-family: sans-serif;
+                background-color: whitesmoke;
+            }
+
+            h1, h2 {
+                font-size: 1.2em;
+            }
+            
+            h1 {
+                font-size: 1.4em;
+                font-family: serif;
+            }
+
+            h2 {
+                font-weight: normal;
+            }
+            
+            input {
+                width: 64em;
+            }
+
+            .system, .font-face {
+                color: magenta;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Instructions</h1>
+        <p>Please double-click each font file in the main folder for this repo, and install each font.</p>
+        <p>See <code>README.md</code> for getting fonts that aren't included in the repo.</p>
+        <p>(Seeing a lot of <span class="system">magenta?</span> That's the color all fallback glyphs will have, or glyphs that fail to render with their intended font and color. You might still need to obtain and/or install the fonts. Or maybe your browser doesn't support all four formats. Most don't. Or maybe you forgot to obtain/install the fonts, *AND* your browser doesn't support the format anyway.)</p>
+        <p>(If you see <span class="system">magenta</span> on the <-- LEFT, you either did not (were not able to?) install that font, the font is broken, or your browser does not support that color font format. If you see <span class="system">magenta</span> on the --> RIGHT, you either haven't placed the font file in the same folder as the <code>test.html</code> file, the font's filename doesn't match the CSS <code>@font-face</code> declaration, the font is broken, or your browser does not support that color font format.)</p>
+        <p>In any case, if the visual on the <-- LEFT matches the visual on the --> RIGHT, and both sides look how the font is supposed to look, e.g. they aren't both the fallback font, your browser supports that format of color font. If not, either the test is broken, the font is broken, or the browser does not fully support that format of color font.</p> 
+        <br>
+        <h1>Main Tests (Well-Known Fonts)</h1>
+        <br>
+        <div id="microsoft">
+            <h2>Segoe UI Emoji (COLR/CPAL):</h2>
+            Local: <span class="system">🐶</span> @font-face: <span class="font-face">🐶</span>
+        </div>
+        <br>   
+        <div id="apple">
+            <h2>Apple Color Emoji (SBIX):</h2>
+            Local: <span class="system">🐶</span> @font-face: <span class="font-face">🐶</span>
+        </div>
+        <br>
+        <div id="google">
+            <h2>Noto Color Emoji (CBDT/CBLC):</h2>
+            Local: <span class="system">🐶</span> @font-face: <span class="font-face">🐶</span>
+        </div>
+        <br>
+        <div id="twitter">
+            <h2>Twemoji (SVG):</h2>
+            Local: <span class="system">🐶</span> @font-face: <span class="font-face">🐶</span>
+        </div>
+        <br>
+        <br>
+        <h1>Extra Tests (More Fonts)</h1>
+        <br>
+        <div id="emojione-moz">
+            <h2>EmojiOne Mozilla (COLR/CPAL):</h2>
+            Local: <span class="system">🐶</span> @font-face: <span class="font-face">🐶</span>
+        </div>
+        <br>
+        <div id="emojione-sbix">
+            <h2>Emoji One (SBIX):</h2>
+            Local: <span class="system">🐶</span> @font-face: <span class="font-face">🐶</span>
+        </div>
+        <br>
+        <div id="emojione-cbdt">
+            <h2>Emoji One (CBDT/CBLC):</h2>
+            Local: [N/A] @font-face: <span class="font-face">🐶</span>
+        </div>
+        <br>
+        <div id="funkster">
+            <h2>Funkster (CBDT/CBLC):</h2>
+            Local: <span class="system">Funkster</span> @font-face: <span class="font-face">Funkster</span>
+        </div>
+        <br>
+        <div id="gilbert">
+            <h2>Gilbert Color (SVG):</h2>
+            Local: <span class="system">x</span> @font-face: <span class="font-face">x</span>
+        </div>
+        <br>
+        <br>
+        <h1>Fallback Font</h1>
+        <br>
+        <div id="noto-traditional">
+            <h2>Noto Emoji (Traditional Outline) (Should be <span class="system">magenta</span>):</h2>
+            Local: <span class="system">🐶</span> @font-face: <span class="font-face">🐶</span>
+        </div>
+        <br>
+        <h1>User Agent String:</h1>
+        <input type="text" id="UserAgent" width="auto">
+        
+        <script>
+            document.getElementById('UserAgent').value = navigator.userAgent;
+        </script>
+    </body>
+</html>
